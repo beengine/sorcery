@@ -54,7 +54,7 @@ module Sorcery
         end
 
         def configure!
-          @configure_blk.call(self) if @configure_blk
+          @configure_blk&.call(self)
         end
       end
 
